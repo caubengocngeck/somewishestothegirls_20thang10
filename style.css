@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #ffd6ec, #ffe6f7);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+h1 {
+  color: #ff4da6;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  border: 2px solid #ff80bf;
+  border-radius: 10px;
+  outline: none;
+  width: 80%;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 25px;
+  border: none;
+  background-color: #ff80bf;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff4da6;
+}
+
+#wish {
+  margin-top: 25px;
+  font-size: 18px;
+  color: #ff4da6;
+  font-weight: 500;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+.flower, .heart {
+  position: absolute;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  animation: fall linear forwards;
+  opacity: 0.8;
+}
+
+.flower {
+  background: url('https://cdn-icons-png.flaticon.com/512/888/888859.png') no-repeat center/contain;
+}
+
+.heart {
+  background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center/contain;
+}
